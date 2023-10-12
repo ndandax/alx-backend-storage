@@ -2,7 +2,7 @@
 -- valid_email only when the email has been changed.
 DELIMITER //
 CREATE TRIGGER reset_trigger
-BEFORE UPDATE ON users
+AFTER UPDATE ON users
 FOR EACH ROW
 BEGIN
 IF NEW.valid_email <> OLD.valid_email THEN
