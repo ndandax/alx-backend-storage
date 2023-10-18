@@ -1,0 +1,5 @@
+//adda new attribute to documents
+db.collection.findOneAndUpdate(
+    {name: "Holberton school"},
+    {$set : {"address" : "972 Mission street"}}
+)
